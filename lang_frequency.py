@@ -24,4 +24,3 @@ if __name__ == '__main__':
         filepath = 'data.txt'
     text = load_data(filepath)
     print(get_most_frequent_words(text))
-
