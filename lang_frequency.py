@@ -7,16 +7,18 @@ def load_data(filepath):
 
 
 def get_most_frequent_words(text):
-    mylist = re.sub('\W', ' ', text).split()
-    max_count = 0
-    max_cntword = ''
-    for i in mylist:
-        count = mylist.count(i)
-        if count>=max_count:
-            max_count = count
-            max_cntword = i
-    return max_cntword
+    mylist = re.sub('\W', ' ', text.lower()).split()
 
+    newlist = list(set(mylist)) # удалим повторяющиеся элементы
+
+    newlist.sort(key=lambda x: mylist.count(x))
+    newlist.reverse()
+
+    return newlist[0:9]
+
+
+def sortByCount(l, s):
+    return l.count(s)
 
 if __name__ == '__main__':
     filepath = input(u'Имя файла [data.txt]: ')
