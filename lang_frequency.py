@@ -11,8 +11,7 @@ def get_most_frequent_words(text):
 
     newlist = list(set(mylist)) # удалим повторяющиеся элементы
 
-    newlist.sort(key=lambda x: mylist.count(x))
-    newlist.reverse()
+    newlist.sort(key=lambda x: mylist.count(x), reverse=True)
 
     return newlist[0:9]
 
