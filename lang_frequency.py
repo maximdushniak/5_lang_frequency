@@ -16,9 +16,6 @@ def get_most_frequent_words(text):
     return newlist[0:9]
 
 
-def sortByCount(l, s):
-    return l.count(s)
-
 if __name__ == '__main__':
     filepath = input(u'Имя файла [data.txt]: ')
     if not filepath:
